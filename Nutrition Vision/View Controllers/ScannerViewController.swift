@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ScannerViewController.swift
 //  Nutrition Vision
 //
 //  Created by Dylan Rothfeld on 11/2/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ScannerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

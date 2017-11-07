@@ -13,7 +13,7 @@
         <scene sceneID="i6f-29-aVz">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4b-aV-94q" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="c6B-wH-acX" customClass="ViewController" customModule="Nutrition_Vision" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="c6B-wH-acX" customClass="UnhealthyViewController" customModule="Nutrition_Vision" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jsk-BB-WtI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                         <viewLayoutGuide key="safeArea" id="5Sy-Vd-unC"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Unhealthy Ingredients" id="bD6-TR-JnV">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-1"/>
                     </tabBarItem>
                 </viewController>
             </objects>
@@ -37,7 +37,7 @@
         <!--Scanner-->
         <scene sceneID="qQH-CQ-8fe">
             <objects>
-                <viewController id="brf-k0-PhP" customClass="ViewController" customModule="Nutrition_Vision" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="brf-k0-PhP" customClass="ScannerViewController" customModule="Nutrition_Vision" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JMQ-cI-a0d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
