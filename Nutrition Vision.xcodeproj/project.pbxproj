@@ -35,6 +35,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B08315811FB21DC1000E9BA8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B08315821FB21DCF000E9BA8 /* Images */,
+				B0DCA7B01FABC5CB008A2CAF /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		B08315821FB21DCF000E9BA8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		B0DCA79D1FABC5CB008A2CAF = {
 			isa = PBXGroup;
 			children = (
@@ -54,10 +70,10 @@
 		B0DCA7A81FABC5CB008A2CAF /* Nutrition Vision */ = {
 			isa = PBXGroup;
 			children = (
+				B08315811FB21DC1000E9BA8 /* Assets */,
 				B0DCA7A91FABC5CB008A2CAF /* AppDelegate.swift */,
 				B0DCA7AB1FABC5CB008A2CAF /* ViewController.swift */,
 				B0DCA7AD1FABC5CB008A2CAF /* Main.storyboard */,
-				B0DCA7B01FABC5CB008A2CAF /* Assets.xcassets */,
 				B0DCA7B21FABC5CB008A2CAF /* LaunchScreen.storyboard */,
 				B0DCA7B51FABC5CB008A2CAF /* Info.plist */,
 			);
