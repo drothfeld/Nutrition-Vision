@@ -57,7 +57,7 @@ let paraben = Ingredient(name: "Paraben", description: "Used to stop mold and ye
 // R
 let recombinant_bovine_growth_hormone = Ingredient(name: "Recombinant Bovine Growth Hormone (rBGH)", description: "Geneticially-engineered version of natural growth hormone in cows. Boosts milk production in cows. Contains high levels of IGF-1, which is thought cause various types of cancer.")
 let refined_vegetable_oil = Ingredient(name: "Refined Vegetable Oil", description: "Includes soybean oil, corn oil, safflower oil, canola oil, and peanut oil. High in omega-6 fats, which are thought to cause heart disease and cancer.")
-let red_fourty = Ingredient(name: "Red #40:", description: "Found in many foods to alter color. All modern food dyes are derived from petroleum. A carcinogen that is linked to cancer in some studies. Also can cause hyperactivity in children. Banned in some European countries. ")
+let red_fourty = Ingredient(name: "Red #40", description: "Found in many foods to alter color. All modern food dyes are derived from petroleum. A carcinogen that is linked to cancer in some studies. Also can cause hyperactivity in children. Banned in some European countries. ")
 let red_two = Ingredient(name: "Red #2", description: "A food coloring that may cause both asthma and cancer.")
 let red_three = Ingredient(name: "Red #3", description: "A carcinogen that is added to cherry pie filling, ice cream and baked goods. May cause nerve damage and thyroid cancer.")
 // S

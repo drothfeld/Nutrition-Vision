@@ -43,6 +43,9 @@
                     <tabBarItem key="tabBarItem" title="Unhealthy Ingredients" id="bD6-TR-JnV">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-1"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="UnhealthyIngredientsTableView" destination="RyI-xE-9lY" id="YSh-zp-eK8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4b-aV-94q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

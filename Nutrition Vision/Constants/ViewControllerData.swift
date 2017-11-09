@@ -23,7 +23,6 @@ let unhealthyIngredients: [Ingredient] = [
     blue_two,
     brown_ht,
     bixin,
-    butane,
     carrageenan,
     camauba_wax,
     chlorine_dioxide,

@@ -10,29 +10,40 @@ import UIKit
 
 class UnhealthyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let myarray = ["item1", "item2", "item3"]
+    // User Interface Outlets
+    @IBOutlet weak var UnhealthyIngredientsTableView: UITableView!
+    
+    // Defined Values
+    var sortedUnhealthyIngredients: [Ingredient] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        refreshTable()
+    }
     
     // Number of Rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return myarray.count
+        return unhealthyIngredients.count
     }
     
     
     // Cell Data
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath)
-        cell.textLabel?.text = myarray[indexPath.item]
+        cell.textLabel?.text = sortedUnhealthyIngredients[indexPath.item].name
         return cell
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    // Sort list of unhealthy ingredients alphabetically
+    func sortIngredientsAlphabetically(unsortedList: Array<Ingredient>) -> Array<Ingredient> {
+        return unsortedList.sorted { $0.name < $1.name }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // Table Refresh
+    func refreshTable() {
+        sortedUnhealthyIngredients = sortIngredientsAlphabetically(unsortedList: unhealthyIngredients)
+        self.UnhealthyIngredientsTableView.reloadData()
     }
     
     override var prefersStatusBarHidden: Bool {
