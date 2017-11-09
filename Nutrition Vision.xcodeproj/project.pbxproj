@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B08315931FB2259B000E9BA8 /* UnhealthyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08315921FB2259B000E9BA8 /* UnhealthyViewController.swift */; };
+		B096DA541FB4C0F30008FE08 /* UnhealthyIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096DA531FB4C0F30008FE08 /* UnhealthyIngredients.swift */; };
+		B096DA571FB4C17A0008FE08 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096DA561FB4C17A0008FE08 /* Ingredient.swift */; };
 		B0DCA7AA1FABC5CB008A2CAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCA7A91FABC5CB008A2CAF /* AppDelegate.swift */; };
 		B0DCA7AC1FABC5CB008A2CAF /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCA7AB1FABC5CB008A2CAF /* ScannerViewController.swift */; };
 		B0DCA7AF1FABC5CB008A2CAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0DCA7AD1FABC5CB008A2CAF /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		B08315921FB2259B000E9BA8 /* UnhealthyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhealthyViewController.swift; sourceTree = "<group>"; };
+		B096DA531FB4C0F30008FE08 /* UnhealthyIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhealthyIngredients.swift; sourceTree = "<group>"; };
+		B096DA561FB4C17A0008FE08 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		B0DCA7A61FABC5CB008A2CAF /* Nutrition Vision.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrition Vision.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0DCA7A91FABC5CB008A2CAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0DCA7AB1FABC5CB008A2CAF /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +66,22 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		B096DA521FB4C0B90008FE08 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B096DA531FB4C0F30008FE08 /* UnhealthyIngredients.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		B096DA551FB4C1680008FE08 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B096DA561FB4C17A0008FE08 /* Ingredient.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		B0DCA79D1FABC5CB008A2CAF = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +101,8 @@
 		B0DCA7A81FABC5CB008A2CAF /* Nutrition Vision */ = {
 			isa = PBXGroup;
 			children = (
+				B096DA551FB4C1680008FE08 /* Classes */,
+				B096DA521FB4C0B90008FE08 /* Constants */,
 				B08315911FB22573000E9BA8 /* View Controllers */,
 				B08315811FB21DC1000E9BA8 /* Assets */,
 				B0DCA7A91FABC5CB008A2CAF /* AppDelegate.swift */,
@@ -165,7 +187,9 @@
 			files = (
 				B0DCA7AC1FABC5CB008A2CAF /* ScannerViewController.swift in Sources */,
 				B0DCA7AA1FABC5CB008A2CAF /* AppDelegate.swift in Sources */,
+				B096DA571FB4C17A0008FE08 /* Ingredient.swift in Sources */,
 				B08315931FB2259B000E9BA8 /* UnhealthyViewController.swift in Sources */,
+				B096DA541FB4C0F30008FE08 /* UnhealthyIngredients.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
