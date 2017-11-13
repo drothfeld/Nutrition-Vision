@@ -8,30 +8,40 @@
 
 import UIKit
 
-class UnhealthyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class UnhealthyViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     // User Interface Outlets
     @IBOutlet weak var UnhealthyIngredientsTableView: UITableView!
+    @IBOutlet weak var UnhealthyIngredientSearchBar: UISearchBar!
     
     // Defined Values
     var sortedUnhealthyIngredients: [Ingredient] = []
+    var filteredUnhealthyIngredients: [Ingredient] = []
+    var isSearching = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         refreshTable()
+        searchBarSetup()
     }
     
     // Number of Rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (isSearching) {
+            return filteredUnhealthyIngredients.count
+        }
         return unhealthyIngredients.count
     }
-    
     
     // Cell Data
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath)
-        cell.textLabel?.text = sortedUnhealthyIngredients[indexPath.item].name
+        if (isSearching) {
+            cell.textLabel?.text = filteredUnhealthyIngredients[indexPath.item].name
+        } else {
+            cell.textLabel?.text = sortedUnhealthyIngredients[indexPath.item].name
+        }
         return cell
     }
     
@@ -44,6 +54,24 @@ class UnhealthyViewController: UIViewController, UITableViewDataSource, UITableV
     func refreshTable() {
         sortedUnhealthyIngredients = sortIngredientsAlphabetically(unsortedList: unhealthyIngredients)
         self.UnhealthyIngredientsTableView.reloadData()
+    }
+    
+    // Search Bar Setup
+    func searchBarSetup() {
+        UnhealthyIngredientSearchBar.delegate = self
+        UnhealthyIngredientSearchBar.returnKeyType = UIReturnKeyType.done
+    }
+    
+    // Search Bar Functionality
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if (UnhealthyIngredientSearchBar.text == nil || UnhealthyIngredientSearchBar.text == "") {
+            isSearching = false
+            view.endEditing(true)
+        } else {
+            isSearching = true
+            filteredUnhealthyIngredients = sortedUnhealthyIngredients.filter( {$0.name.lowercased().contains(UnhealthyIngredientSearchBar.text!.lowercased())} )
+        }
+        UnhealthyIngredientsTableView.reloadData()
     }
     
     override var prefersStatusBarHidden: Bool {
