@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B03DD94A1FBB91C400538B47 /* IngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DD9491FBB91C400538B47 /* IngredientViewController.swift */; };
 		B08315931FB2259B000E9BA8 /* UnhealthyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08315921FB2259B000E9BA8 /* UnhealthyViewController.swift */; };
 		B0908A661FB4F53600E29B01 /* ViewControllerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0908A651FB4F53600E29B01 /* ViewControllerData.swift */; };
 		B096DA541FB4C0F30008FE08 /* UnhealthyIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096DA531FB4C0F30008FE08 /* UnhealthyIngredients.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B03DD9491FBB91C400538B47 /* IngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientViewController.swift; sourceTree = "<group>"; };
 		B08315921FB2259B000E9BA8 /* UnhealthyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhealthyViewController.swift; sourceTree = "<group>"; };
 		B0908A651FB4F53600E29B01 /* ViewControllerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerData.swift; sourceTree = "<group>"; };
 		B096DA531FB4C0F30008FE08 /* UnhealthyIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhealthyIngredients.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				B0DCA7AB1FABC5CB008A2CAF /* ScannerViewController.swift */,
 				B08315921FB2259B000E9BA8 /* UnhealthyViewController.swift */,
+				B03DD9491FBB91C400538B47 /* IngredientViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03DD94A1FBB91C400538B47 /* IngredientViewController.swift in Sources */,
 				B0908A661FB4F53600E29B01 /* ViewControllerData.swift in Sources */,
 				B0DCA7AC1FABC5CB008A2CAF /* ScannerViewController.swift in Sources */,
 				B0DCA7AA1FABC5CB008A2CAF /* AppDelegate.swift in Sources */,

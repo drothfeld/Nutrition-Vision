@@ -34,6 +34,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="6mH-Nm-m3C" kind="showDetail" id="JYZ-9X-ksK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -62,7 +65,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="5Sy-Vd-unC"/>
+                        <viewLayoutGuide key="safeArea" id="QJu-nh-q0z"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Unhealthy Ingredients" id="bD6-TR-JnV">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-1"/>
@@ -76,6 +79,22 @@
             </objects>
             <point key="canvasLocation" x="1778.4000000000001" y="474.51274362818594"/>
         </scene>
+        <!--Ingredient View Controller-->
+        <scene sceneID="1rz-40-0uu">
+            <objects>
+                <viewController id="6mH-Nm-m3C" customClass="IngredientViewController" customModule="Nutrition_Vision" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ser-hK-qag">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="RAw-Tf-BpP"/>
+                    </view>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gi5-MN-G5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3386" y="475"/>
+        </scene>
         <!--Scanner-->
         <scene sceneID="qQH-CQ-8fe">
             <objects>
@@ -84,7 +103,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="fzM-eZ-MBD"/>
+                        <viewLayoutGuide key="safeArea" id="A6K-t2-AK5"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Scanner" id="Fpr-p0-nhZ">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>

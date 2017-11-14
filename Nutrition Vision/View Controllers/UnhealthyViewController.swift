@@ -74,6 +74,24 @@ class UnhealthyViewController: UIViewController, UITableViewDataSource, UITableV
         UnhealthyIngredientsTableView.reloadData()
     }
     
+    // Preparing ingredient to get details on
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            if let indexPath = UnhealthyIngredientsTableView.indexPathForSelectedRow {
+                let ingredient: Ingredient
+                if isSearching {
+                    ingredient = filteredUnhealthyIngredients[indexPath.row]
+                } else {
+                    ingredient = sortedUnhealthyIngredients[indexPath.row]
+                }
+                let controller = (segue.destination as! UINavigationController).topViewController as! IngredientViewController
+                controller.detailIngredient = ingredient
+                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
+                controller.navigationItem.leftItemsSupplementBackButton = true
+            }
+        }
+    }
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
