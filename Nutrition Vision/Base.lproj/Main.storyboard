@@ -116,13 +116,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Description" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rRl-Ow-zbB" userLabel="Ingredient Description Text">
-                                <rect key="frame" x="16" y="433" width="343" height="147"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Description" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhE-8f-RTB">
+                                <rect key="frame" x="16" y="406" width="343" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="RAw-Tf-BpP"/>
@@ -130,7 +130,7 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="IngredientDescriptionText" destination="rRl-Ow-zbB" id="j8e-qr-XcK"/>
+                        <outlet property="IngredientDescriptionText" destination="lhE-8f-RTB" id="zQM-8F-dMn"/>
                         <outlet property="IngredientImage" destination="a84-zi-nKS" id="ek4-KN-kuT"/>
                         <outlet property="IngredientNameLabel" destination="JJc-wy-lx6" id="E6v-4t-dUg"/>
                         <outlet property="IngredientSourceLabel" destination="2hK-Ay-SnP" id="Reh-sN-izj"/>

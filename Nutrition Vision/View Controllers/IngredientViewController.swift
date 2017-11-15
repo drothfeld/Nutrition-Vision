@@ -11,7 +11,7 @@ import UIKit
 class IngredientViewController: UIViewController {
     // UI Elements
     @IBOutlet weak var IngredientNameLabel: UILabel!
-    @IBOutlet weak var IngredientDescriptionText: UITextField!
+    @IBOutlet weak var IngredientDescriptionText: UITextView!
     @IBOutlet weak var IngredientSourceLabel: UILabel!
     @IBOutlet weak var IngredientImage: UIImageView!
     
