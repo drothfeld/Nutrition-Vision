@@ -67,9 +67,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="QJu-nh-q0z"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Unhealthy Ingredients" id="bD6-TR-JnV">
+                    <tabBarItem key="tabBarItem" title="Unhealthy Ingredients" id="jKp-GU-oN9">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-1"/>
                     </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="UnhealthyIngredientSearchBar" destination="Qtf-ia-97p" id="TEl-x5-ofG"/>
                         <outlet property="UnhealthyIngredientsTableView" destination="RyI-xE-9lY" id="YSh-zp-eK8"/>
@@ -77,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q4b-aV-94q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778.4000000000001" y="474.51274362818594"/>
+            <point key="canvasLocation" x="1270" y="475"/>
         </scene>
         <!--Ingredient View Controller-->
         <scene sceneID="1rz-40-0uu">
@@ -93,7 +94,7 @@
                                 <items>
                                     <barButtonItem title="&lt; Back" id="9vn-if-gfe">
                                         <connections>
-                                            <segue destination="c6B-wH-acX" kind="showDetail" id="8vy-uY-T6C"/>
+                                            <segue destination="TBb-sv-UKb" kind="showDetail" id="DkC-j1-ZKx"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -138,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gi5-MN-G5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3384.8000000000002" y="474.51274362818594"/>
+            <point key="canvasLocation" x="-927" y="823"/>
         </scene>
         <!--Scanner-->
         <scene sceneID="qQH-CQ-8fe">
@@ -156,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ocm-iA-gM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1779" y="-189"/>
+            <point key="canvasLocation" x="1270" y="-320"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="x42-LA-3LW">
@@ -168,16 +169,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="brf-k0-PhP" kind="relationship" relationship="viewControllers" id="i0l-GT-1vG"/>
                         <segue destination="c6B-wH-acX" kind="relationship" relationship="viewControllers" id="CvG-f2-80y"/>
+                        <segue destination="brf-k0-PhP" kind="relationship" relationship="viewControllers" id="7aq-GC-IHh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsA-JT-ZBV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="25" y="134"/>
+            <point key="canvasLocation" x="-54" y="100"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="8vy-uY-T6C"/>
-    </inferredMetricsTieBreakers>
 </document>
