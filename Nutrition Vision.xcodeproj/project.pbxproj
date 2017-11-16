@@ -17,6 +17,7 @@
 		B0DCA7AF1FABC5CB008A2CAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0DCA7AD1FABC5CB008A2CAF /* Main.storyboard */; };
 		B0DCA7B11FABC5CB008A2CAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0DCA7B01FABC5CB008A2CAF /* Assets.xcassets */; };
 		B0DCA7B41FABC5CB008A2CAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0DCA7B21FABC5CB008A2CAF /* LaunchScreen.storyboard */; };
+		B0E0BD7E1FBE2E1300A03115 /* Sources.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E0BD7D1FBE2E1300A03115 /* Sources.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B0DCA7B01FABC5CB008A2CAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0DCA7B31FABC5CB008A2CAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0DCA7B51FABC5CB008A2CAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0E0BD7D1FBE2E1300A03115 /* Sources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			children = (
 				B096DA531FB4C0F30008FE08 /* UnhealthyIngredients.swift */,
 				B0908A651FB4F53600E29B01 /* ViewControllerData.swift */,
+				B0E0BD7D1FBE2E1300A03115 /* Sources.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				B0908A661FB4F53600E29B01 /* ViewControllerData.swift in Sources */,
 				B0DCA7AC1FABC5CB008A2CAF /* ScannerViewController.swift in Sources */,
 				B0DCA7AA1FABC5CB008A2CAF /* AppDelegate.swift in Sources */,
+				B0E0BD7E1FBE2E1300A03115 /* Sources.swift in Sources */,
 				B096DA571FB4C17A0008FE08 /* Ingredient.swift in Sources */,
 				B08315931FB2259B000E9BA8 /* UnhealthyViewController.swift in Sources */,
 				B096DA541FB4C0F30008FE08 /* UnhealthyIngredients.swift in Sources */,

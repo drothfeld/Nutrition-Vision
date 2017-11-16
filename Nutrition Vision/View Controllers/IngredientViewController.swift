@@ -33,7 +33,7 @@ class IngredientViewController: UIViewController {
             if let IngredientDescriptionText = IngredientDescriptionText, let IngredientNameLabel = IngredientNameLabel {
                 IngredientNameLabel.text = detailIngredient.name
                 IngredientDescriptionText.text = detailIngredient.description
-                //IngredientSourceLabel.text = detailIngredient.source
+                IngredientSourceLabel.text = String(describing: detailIngredient.source)
                 //IngredientImage.image = UIImage(detailIngredient.image)
             }
         }

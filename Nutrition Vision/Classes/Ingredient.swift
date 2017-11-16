@@ -12,10 +12,14 @@ class Ingredient {
     // Fields
     var name: String
     var description: String
+    var imagePath: String
+    var source: URL
     
     // Constructor
-    init(name: String, description: String) {
+    init(name: String, description: String, source: URL) {
         self.name = name
         self.description = description
+        self.source = source
+        self.imagePath = name + ".png"
     }
 }
