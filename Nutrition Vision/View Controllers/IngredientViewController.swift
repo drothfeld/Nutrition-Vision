@@ -12,8 +12,11 @@ class IngredientViewController: UIViewController {
     // UI Elements
     @IBOutlet weak var IngredientNameLabel: UILabel!
     @IBOutlet weak var IngredientDescriptionText: UITextView!
-    @IBOutlet weak var IngredientSourceLabel: UILabel!
     @IBOutlet weak var IngredientImage: UIImageView!
+    @IBOutlet weak var IngredientSourceText: UITextView!
+    
+    // Defined Values
+    let attributedSourceString = NSMutableAttributedString(string: "Reference/Source")
     
     // Defined Values
     var detailIngredient: Ingredient? {
@@ -33,7 +36,10 @@ class IngredientViewController: UIViewController {
             if let IngredientDescriptionText = IngredientDescriptionText, let IngredientNameLabel = IngredientNameLabel {
                 IngredientNameLabel.text = detailIngredient.name
                 IngredientDescriptionText.text = detailIngredient.description
-                IngredientSourceLabel.text = String(describing: detailIngredient.source)
+                // Hypertext to reference site
+                IngredientSourceText.text = String(describing: detailIngredient.source)
+                attributedSourceString.addAttribute(.link, value: String(describing: detailIngredient.source), range: NSRange(location: 0, length: 16))
+                IngredientSourceText.attributedText = attributedSourceString
                 //IngredientImage.image = UIImage(detailIngredient.image)
             }
         }

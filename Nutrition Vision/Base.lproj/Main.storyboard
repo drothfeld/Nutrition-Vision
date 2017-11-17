@@ -110,19 +110,21 @@
                                 <rect key="frame" x="67" y="122" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Source" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hK-Ay-SnP">
-                                <rect key="frame" x="0.0" y="588" width="375" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Description" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhE-8f-RTB">
                                 <rect key="frame" x="16" y="406" width="343" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Source" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z3E-iR-cnP" userLabel="Ingredient Source Text">
+                                <rect key="frame" x="122" y="588" width="130" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -134,12 +136,12 @@
                         <outlet property="IngredientDescriptionText" destination="lhE-8f-RTB" id="zQM-8F-dMn"/>
                         <outlet property="IngredientImage" destination="a84-zi-nKS" id="ek4-KN-kuT"/>
                         <outlet property="IngredientNameLabel" destination="JJc-wy-lx6" id="E6v-4t-dUg"/>
-                        <outlet property="IngredientSourceLabel" destination="2hK-Ay-SnP" id="Reh-sN-izj"/>
+                        <outlet property="IngredientSourceText" destination="z3E-iR-cnP" id="sHR-Ke-Bjh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gi5-MN-G5s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-927" y="823"/>
+            <point key="canvasLocation" x="-927.20000000000005" y="821.73913043478262"/>
         </scene>
         <!--Scanner-->
         <scene sceneID="qQH-CQ-8fe">
