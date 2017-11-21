@@ -1,5 +1,5 @@
 //
-//  ViewControllerData.swift
+//  ListData.swift
 //  Nutrition Vision
 //
 //  Created by Dylan Rothfeld on 11/9/17.
