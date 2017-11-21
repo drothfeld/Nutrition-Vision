@@ -8,6 +8,16 @@
 
 import UIKit
 
+let nutritionValues: [NutritionValue] = [
+    sodium,
+    cholesterol,
+    total_carbohydrate,
+    dietary_fiber,
+    saturated_fat,
+    total_fat,
+    sugar
+]
+
 let unhealthyIngredients: [Ingredient] = [
     acesulfame_potassium,
     agave_nectar,

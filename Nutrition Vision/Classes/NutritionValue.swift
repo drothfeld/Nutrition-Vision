@@ -11,17 +11,17 @@ import UIKit
 class NutritionValue {
     // Fields
     var name: String
-    var description: String
     var units: String
     var dailyMax: Int
+    var calorieDiet: Int
     var source: URL
     
     // Constructor
-    init(name: String, description: String, units: String, dailyMax: Int, source: URL) {
+    init(name: String, units: String, dailyMax: Int, source: URL) {
         self.name = name
-        self.description = description
         self.units = units
         self.dailyMax = dailyMax
         self.source = source
+        self.calorieDiet = 2000
     }
 }
