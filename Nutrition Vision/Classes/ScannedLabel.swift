@@ -28,13 +28,14 @@ class ScannedLabel {
         self.protein = 0
         
         self.extractTextFromImage()
+        self.parseText()
     }
     
     // TODO: Implement SwiftOCR library to
     // create nerual net that extracts a string
     // from the scanned image
     func extractTextFromImage() {
-        self.scannedText = "Total Fat 14g Saturated Fat 9g Cholesterol 55mg Sodium 75g"
+        self.scannedText = "Total Fat 14g Saturated Fat 9g Cholesterol 55mg Sodium 75g Total Carbohydrate 945g Dietary Fiber 20g Total Sugars 33g Protein 6g"
     }
     
     // Parse nutrition values from extended
@@ -45,18 +46,32 @@ class ScannedLabel {
             switch (text) {
                 case "Sodium":
                     self.sodium = Int(splitTextArray[index + 1].dropLast())!
-                
+
                 case "Cholesterol":
                     self.cholesterol = (Int(splitTextArray[index + 1].dropLast().dropLast()))!
                 
                 case "Total":
                     if (splitTextArray[index + 1] == "Fat") {
                         self.total_fat = Int(splitTextArray[index + 2].dropLast())!
+                    } else if (splitTextArray[index + 1] == "Carbohydrate") {
+                        self.total_carbohydrate = Int(splitTextArray[index + 2].dropLast())!
                     }
+                
+                case "Fiber":
+                    self.dietary_fiber = Int(splitTextArray[index + 1].dropLast())!
+                
+                case "Saturated":
+                    self.saturated_fat = Int(splitTextArray[index + 2].dropLast())!
+                
+                case "Sugar", "Sugars":
+                    self.sugar = Int(splitTextArray[index + 1].dropLast())!
+                
+                case "Protein":
+                    self.protein = Int(splitTextArray[index + 1].dropLast())!
+                
                 default:
                     break
             }
-            
         }
     }
 }
