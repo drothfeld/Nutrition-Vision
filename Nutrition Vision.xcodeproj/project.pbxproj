@@ -10,6 +10,7 @@
 		B03DD94A1FBB91C400538B47 /* IngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DD9491FBB91C400538B47 /* IngredientViewController.swift */; };
 		B0485D031FC4940F00AE85FA /* DailyNutritionValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0485D021FC4940F00AE85FA /* DailyNutritionValues.swift */; };
 		B0485D051FC4953500AE85FA /* NutritionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0485D041FC4953500AE85FA /* NutritionValue.swift */; };
+		B0485D071FC796F400AE85FA /* ScannedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0485D061FC796F400AE85FA /* ScannedLabel.swift */; };
 		B08315931FB2259B000E9BA8 /* UnhealthyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08315921FB2259B000E9BA8 /* UnhealthyViewController.swift */; };
 		B0908A661FB4F53600E29B01 /* ListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0908A651FB4F53600E29B01 /* ListData.swift */; };
 		B096DA541FB4C0F30008FE08 /* UnhealthyIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096DA531FB4C0F30008FE08 /* UnhealthyIngredients.swift */; };
@@ -26,6 +27,7 @@
 		B03DD9491FBB91C400538B47 /* IngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientViewController.swift; sourceTree = "<group>"; };
 		B0485D021FC4940F00AE85FA /* DailyNutritionValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNutritionValues.swift; sourceTree = "<group>"; };
 		B0485D041FC4953500AE85FA /* NutritionValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionValue.swift; sourceTree = "<group>"; };
+		B0485D061FC796F400AE85FA /* ScannedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedLabel.swift; sourceTree = "<group>"; };
 		B08315921FB2259B000E9BA8 /* UnhealthyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhealthyViewController.swift; sourceTree = "<group>"; };
 		B0908A651FB4F53600E29B01 /* ListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListData.swift; sourceTree = "<group>"; };
 		B096DA531FB4C0F30008FE08 /* UnhealthyIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhealthyIngredients.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 			children = (
 				B096DA561FB4C17A0008FE08 /* Ingredient.swift */,
 				B0485D041FC4953500AE85FA /* NutritionValue.swift */,
+				B0485D061FC796F400AE85FA /* ScannedLabel.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0485D051FC4953500AE85FA /* NutritionValue.swift in Sources */,
+				B0485D071FC796F400AE85FA /* ScannedLabel.swift in Sources */,
 				B03DD94A1FBB91C400538B47 /* IngredientViewController.swift in Sources */,
 				B0908A661FB4F53600E29B01 /* ListData.swift in Sources */,
 				B0DCA7AC1FABC5CB008A2CAF /* ScannerViewController.swift in Sources */,

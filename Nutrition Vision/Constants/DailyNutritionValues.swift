@@ -15,4 +15,4 @@ let dietary_fiber = NutritionValue(name: "Dietary Fiber", units: "(g)", dailyMax
 let saturated_fat = NutritionValue(name: "Saturated Fat", units: "(g)", dailyMax: 20, source: sourceURL[fda_gov_nutrition])
 let total_fat = NutritionValue(name: "Total Fat", units: "(g)", dailyMax: 65, source: sourceURL[fda_gov_nutrition])
 let sugar = NutritionValue(name: "Sugar", units: "(g)", dailyMax: 32, source: sourceURL[aha_dietary_sugar_intake])
-
+let protein = NutritionValue(name: "Protein", units: "(g)", dailyMax: 50, source: sourceURL[fda_gov_nutrition])
