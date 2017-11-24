@@ -9,13 +9,14 @@
 import UIKit
 
 let nutritionValues: [NutritionValue] = [
-    sodium,
-    cholesterol,
-    total_carbohydrate,
-    dietary_fiber,
-    saturated_fat,
-    total_fat,
-    sugar
+    sodium_dv,
+    cholesterol_dv,
+    total_carbohydrate_dv,
+    dietary_fiber_dv,
+    saturated_fat_dv,
+    total_fat_dv,
+    sugar_dv,
+    protein_dv
 ]
 
 let unhealthyIngredients: [Ingredient] = [

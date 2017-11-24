@@ -13,6 +13,7 @@ class ScannedLabel {
     var scannedImage: UIImage
     var scannedText: String
     var sodium, cholesterol, total_carbohydrate, dietary_fiber, saturated_fat, total_fat, sugar, protein: Int
+    var scannedValues: [Int]
     
     // Constructor
     init(scannedImage: UIImage) {
@@ -27,8 +28,24 @@ class ScannedLabel {
         self.sugar = 0
         self.protein = 0
         
+        self.scannedValues = [
+            sodium,
+            cholesterol,
+            total_carbohydrate,
+            dietary_fiber,
+            saturated_fat,
+            total_fat,
+            sugar,
+            protein
+        ]
+        
         self.extractTextFromImage()
         self.parseText()
+    }
+    
+    // Description returned for nutritional value comparison
+    private func overDailyMax(nutritionalValue: String, halfToMax: Bool) -> String {
+        return "The amount of " + nutritionalValue + " in a single serving of this product is more than" + (halfToMax ? " half of " : " ") + "the healthy daily allowance."
     }
     
     // TODO: Implement SwiftOCR library to
@@ -43,7 +60,7 @@ class ScannedLabel {
     func parseText() {
         let splitTextArray = self.scannedText.components(separatedBy:  " ")
         for (index, text) in splitTextArray.enumerated() {
-            switch (text) {
+            switch text {
                 case "Sodium":
                     self.sodium = Int(splitTextArray[index + 1].dropLast())!
 
@@ -73,5 +90,16 @@ class ScannedLabel {
                     break
             }
         }
+    }
+    
+    // Get text feedback about scanned
+    // nutrition value compared to healthy DV
+    func getNutritionFeedback(scannedValue: Int, DVvalue: NutritionValue) -> String {
+        if (scannedValue > DVvalue.dailyMax) {
+            return overDailyMax(nutritionalValue: DVvalue.name, halfToMax: false)
+        } else if ((scannedValue <= DVvalue.dailyMax) && (scannedValue >= (DVvalue.dailyMax/2))) {
+            return overDailyMax(nutritionalValue: DVvalue.name, halfToMax: true)
+        }
+        return ""
     }
 }
