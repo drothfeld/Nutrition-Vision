@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B02879621FD5BC9400E12960 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02879611FD5BC9400E12960 /* PhotoViewController.swift */; };
 		B03DD94A1FBB91C400538B47 /* IngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DD9491FBB91C400538B47 /* IngredientViewController.swift */; };
 		B0485D031FC4940F00AE85FA /* DailyNutritionValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0485D021FC4940F00AE85FA /* DailyNutritionValues.swift */; };
 		B0485D051FC4953500AE85FA /* NutritionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0485D041FC4953500AE85FA /* NutritionValue.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B02879611FD5BC9400E12960 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		B03DD9491FBB91C400538B47 /* IngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientViewController.swift; sourceTree = "<group>"; };
 		B0485D021FC4940F00AE85FA /* DailyNutritionValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNutritionValues.swift; sourceTree = "<group>"; };
 		B0485D041FC4953500AE85FA /* NutritionValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionValue.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				B0DCA7AB1FABC5CB008A2CAF /* ScannerViewController.swift */,
 				B08315921FB2259B000E9BA8 /* UnhealthyViewController.swift */,
 				B03DD9491FBB91C400538B47 /* IngredientViewController.swift */,
+				B02879611FD5BC9400E12960 /* PhotoViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				B03DD94A1FBB91C400538B47 /* IngredientViewController.swift in Sources */,
 				B0908A661FB4F53600E29B01 /* ListData.swift in Sources */,
 				B0DCA7AC1FABC5CB008A2CAF /* ScannerViewController.swift in Sources */,
+				B02879621FD5BC9400E12960 /* PhotoViewController.swift in Sources */,
 				B0DCA7AA1FABC5CB008A2CAF /* AppDelegate.swift in Sources */,
 				B0E0BD7E1FBE2E1300A03115 /* Sources.swift in Sources */,
 				B096DA571FB4C17A0008FE08 /* Ingredient.swift in Sources */,
