@@ -9,12 +9,13 @@
 import UIKit
 import AVFoundation
 
-class ScannerViewController: UIViewController {
+class ScannerViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     let captureSession = AVCaptureSession()
     
     var previewLayer: CALayer!
     var captureDevice: AVCaptureDevice!
+    var takePhoto = false
 
     // Defined Values
     var currentScannedLabel: ScannedLabel = ScannedLabel(scannedImage: "null")
@@ -25,6 +26,10 @@ class ScannerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         resetScanner()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         prepareCamera()
     }
     
@@ -68,6 +73,54 @@ class ScannerViewController: UIViewController {
         
         captureSession.commitConfiguration()
         
+        let queue = DispatchQueue(label: "captureQueue")
+        dataOutput.setSampleBufferDelegate(self, queue: queue)
+        
+    }
+    
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        if takePhoto {
+            takePhoto = false
+            // Get an image from sample buffer
+            if let image = self.getImageFromSampleBuffer(buffer: sampleBuffer) {
+                DispatchQueue.main.async {
+                    let photoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PhotoVC") as! PhotoViewController
+                    photoVC.takenPhoto = image
+                    
+                    self.present(photoVC, animated: true, completion: {
+                        self.stopCaptureSession()
+                    })
+                }
+            }
+        }
+    }
+    
+    func getImageFromSampleBuffer(buffer: CMSampleBuffer) ->UIImage? {
+        if let pixelBuffer = CMSampleBufferGetImageBuffer(buffer) {
+            let ciImage = CIImage(cvPixelBuffer: pixelBuffer)
+            let context = CIContext()
+            
+            let imageRect = CGRect(x: 0, y: 0, width: CVPixelBufferGetWidth(pixelBuffer), height: CVPixelBufferGetHeight(pixelBuffer))
+            
+            if let image = context.createCGImage((ciImage), from: imageRect) {
+                return UIImage(cgImage: image, scale: UIScreen.main.scale, orientation: .right)
+            }
+        }
+        return nil
+    }
+    
+    func stopCaptureSession() {
+        self.captureSession.stopRunning()
+        
+        if let inputs = captureSession.inputs as? [AVCaptureDeviceInput] {
+            for input in inputs {
+                self.captureSession.removeInput(input)
+            }
+        }
+    }
+    
+    @IBAction func takePhoto(_ sender: Any) {
+        takePhoto = true
     }
     
     // Resetting all scanner values
