@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B02879621FD5BC9400E12960 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02879611FD5BC9400E12960 /* PhotoViewController.swift */; };
+		B031F7D21FE8CDC500E4D622 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B031F7CC1FE8CDC500E4D622 /* camera@2x.png */; };
+		B031F7D31FE8CDC500E4D622 /* unhealthy.png in Resources */ = {isa = PBXBuildFile; fileRef = B031F7CD1FE8CDC500E4D622 /* unhealthy.png */; };
+		B031F7D41FE8CDC500E4D622 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = B031F7CE1FE8CDC500E4D622 /* camera.png */; };
+		B031F7D51FE8CDC500E4D622 /* camera@3px.png in Resources */ = {isa = PBXBuildFile; fileRef = B031F7CF1FE8CDC500E4D622 /* camera@3px.png */; };
+		B031F7D61FE8CDC500E4D622 /* unhealthy@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B031F7D01FE8CDC500E4D622 /* unhealthy@3x.png */; };
+		B031F7D71FE8CDC500E4D622 /* unhealthy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B031F7D11FE8CDC500E4D622 /* unhealthy@2x.png */; };
 		B03DD94A1FBB91C400538B47 /* IngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03DD9491FBB91C400538B47 /* IngredientViewController.swift */; };
 		B0485D031FC4940F00AE85FA /* DailyNutritionValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0485D021FC4940F00AE85FA /* DailyNutritionValues.swift */; };
 		B0485D051FC4953500AE85FA /* NutritionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0485D041FC4953500AE85FA /* NutritionValue.swift */; };
@@ -26,6 +32,12 @@
 
 /* Begin PBXFileReference section */
 		B02879611FD5BC9400E12960 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		B031F7CC1FE8CDC500E4D622 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
+		B031F7CD1FE8CDC500E4D622 /* unhealthy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unhealthy.png; sourceTree = "<group>"; };
+		B031F7CE1FE8CDC500E4D622 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		B031F7CF1FE8CDC500E4D622 /* camera@3px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@3px.png"; sourceTree = "<group>"; };
+		B031F7D01FE8CDC500E4D622 /* unhealthy@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unhealthy@3x.png"; sourceTree = "<group>"; };
+		B031F7D11FE8CDC500E4D622 /* unhealthy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "unhealthy@2x.png"; sourceTree = "<group>"; };
 		B03DD9491FBB91C400538B47 /* IngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientViewController.swift; sourceTree = "<group>"; };
 		B0485D021FC4940F00AE85FA /* DailyNutritionValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNutritionValues.swift; sourceTree = "<group>"; };
 		B0485D041FC4953500AE85FA /* NutritionValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionValue.swift; sourceTree = "<group>"; };
@@ -67,6 +79,12 @@
 		B08315821FB21DCF000E9BA8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B031F7CE1FE8CDC500E4D622 /* camera.png */,
+				B031F7CC1FE8CDC500E4D622 /* camera@2x.png */,
+				B031F7CF1FE8CDC500E4D622 /* camera@3px.png */,
+				B031F7CD1FE8CDC500E4D622 /* unhealthy.png */,
+				B031F7D11FE8CDC500E4D622 /* unhealthy@2x.png */,
+				B031F7D01FE8CDC500E4D622 /* unhealthy@3x.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -193,9 +211,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B031F7D61FE8CDC500E4D622 /* unhealthy@3x.png in Resources */,
+				B031F7D51FE8CDC500E4D622 /* camera@3px.png in Resources */,
 				B0DCA7B41FABC5CB008A2CAF /* LaunchScreen.storyboard in Resources */,
+				B031F7D71FE8CDC500E4D622 /* unhealthy@2x.png in Resources */,
+				B031F7D31FE8CDC500E4D622 /* unhealthy.png in Resources */,
 				B0DCA7B11FABC5CB008A2CAF /* Assets.xcassets in Resources */,
 				B0DCA7AF1FABC5CB008A2CAF /* Main.storyboard in Resources */,
+				B031F7D41FE8CDC500E4D622 /* camera.png in Resources */,
+				B031F7D21FE8CDC500E4D622 /* camera@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

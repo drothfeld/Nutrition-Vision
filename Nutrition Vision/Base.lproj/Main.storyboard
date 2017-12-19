@@ -70,8 +70,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="QJu-nh-q0z"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Unhealthy Ingredients" id="jKp-GU-oN9">
-                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-1"/>
+                    <tabBarItem key="tabBarItem" title="Unhealthy Ingredients" image="unhealthy.png" selectedImage="unhealthy.png" id="jKp-GU-oN9">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -154,7 +154,7 @@
             <objects>
                 <viewController id="brf-k0-PhP" customClass="ScannerViewController" customModule="Nutrition_Vision" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JMQ-cI-a0d">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="A6K-t2-AK5"/>
@@ -197,11 +197,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgV-wV-F3r">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.1994084418" green="0.44594979289999997" blue="0.78042948249999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <items/>
+                                <color key="barTintColor" red="0.1994084418" green="0.44594979289999997" blue="0.78042948249999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ar4-iN-JYw">
-                                <rect key="frame" x="16" y="11" width="45" height="39"/>
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Back"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="goBack:" destination="tUZ-gM-m5T" eventType="touchUpInside" id="Hmq-JH-3dr"/>
                                 </connections>
@@ -222,12 +231,20 @@
         <scene sceneID="x42-LA-3LW">
             <objects>
                 <tabBarController id="TBb-sv-UKb" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SkC-7G-cU8">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="SkC-7G-cU8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.52588899882000251" green="0.52709875208018786" blue="0.54555942357512954" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="0.78452402353286743" green="0.78394287824630737" blue="0.80392485857009888" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="barTintColor" red="0.19940844178199768" green="0.44594979286193848" blue="0.78042948246002197" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="c6B-wH-acX" kind="relationship" relationship="viewControllers" id="CvG-f2-80y"/>
@@ -242,7 +259,7 @@
         <scene sceneID="J4s-Qo-NOB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5bh-Fj-YxA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Scanner" id="Fpr-p0-nhZ">
+                    <tabBarItem key="tabBarItem" title="Scanner" image="camera.png" selectedImage="camera.png" id="Fpr-p0-nhZ">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -260,4 +277,8 @@
             <point key="canvasLocation" x="1519" y="-278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera.png" width="25" height="25"/>
+        <image name="unhealthy.png" width="25" height="25"/>
+    </resources>
 </document>
