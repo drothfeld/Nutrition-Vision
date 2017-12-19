@@ -10,13 +10,13 @@ import UIKit
 
 class ScannedLabel {
     // Fields
-    var scannedImage: String
+    var scannedImage: UIImage
     var scannedText: String
     var sodium, cholesterol, total_carbohydrate, dietary_fiber, saturated_fat, total_fat, sugar, protein: Int
     var scannedValues: [Int]
     
     // Constructor
-    init(scannedImage: String) {
+    init(scannedImage: UIImage) {
         self.scannedImage = scannedImage
         self.scannedText = ""
         self.sodium = 0

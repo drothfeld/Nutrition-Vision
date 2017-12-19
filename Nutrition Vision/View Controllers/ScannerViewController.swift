@@ -11,17 +11,17 @@ import AVFoundation
 
 class ScannerViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
+    // Defined Values
     let captureSession = AVCaptureSession()
-    
     var previewLayer: CALayer!
     var captureDevice: AVCaptureDevice!
     var takePhoto = false
-
-    // Defined Values
-    var currentScannedLabel: ScannedLabel = ScannedLabel(scannedImage: "null")
-    var scannedImageName: String = "placeholder.png"
+    var currentScannedLabel: ScannedLabel!
     var nutritionFeedback: String = ""
     var isHealthy: Bool = true
+    
+    // UI Elements
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,6 +91,9 @@ class ScannerViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
                         self.stopCaptureSession()
                     })
                 }
+                // Creating scanned label object
+                currentScannedLabel = ScannedLabel(scannedImage: image)
+                //NSLog(String(describing: currentScannedLabel.scannedImage.size))
             }
         }
     }
@@ -129,8 +132,6 @@ class ScannerViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
         isHealthy = true
         // TODO: Need to grab the string from the
         // name of the image that user takes
-        scannedImageName = "placeholder.png"
-        currentScannedLabel = ScannedLabel(scannedImage: scannedImageName)
     }
     
     // Concatenating feedback string for all nutritional values
