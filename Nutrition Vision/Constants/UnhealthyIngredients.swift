@@ -30,7 +30,7 @@ let camauba_wax = Ingredient(name: "Camauba Wax", description: "Used in chewing 
 let chlorine_dioxide = Ingredient(name: "Chlorine Dioxide", description: "Used in bleaching flour. Can cause tumors and hyperactivity in children.", source: sourceURL[mph_programs_list_advocates_for_public_health_education])
 let citrus_red_one = Ingredient(name: "Citrus Red #1", description: "Sprayed on oranges to make them look ripe. Can damage chromosomes and lead to cancer.", source: sourceURL[mph_programs_list_advocates_for_public_health_education])
 let citrus_red_two = Ingredient(name: "Citrus Red #2", description: "Used to color oranges. Can cause cancer if you eat the peel.", source: sourceURL[mph_programs_list_advocates_for_public_health_education])
-let caramel_coloring = Ingredient(name: "Caramel Coloring)", description: " In soft drinks, sauces, pastries and breads. When made with ammonia, it can cause cancer in mice. Food companies not required to disclose if this ingredient is made with ammonia.", source: sourceURL[mph_programs_list_advocates_for_public_health_education])
+let caramel_coloring = Ingredient(name: "Caramel Coloring", description: " In soft drinks, sauces, pastries and breads. When made with ammonia, it can cause cancer in mice. Food companies not required to disclose if this ingredient is made with ammonia.", source: sourceURL[mph_programs_list_advocates_for_public_health_education])
 // D
 let disodium_inosinate = Ingredient(name: "Disodium Inosinate", description: "In snack foods. Contains MSG.", source: sourceURL[mph_programs_list_advocates_for_public_health_education])
 let disodium_guanylate = Ingredient(name: "Disodium Guanylate", description: "In snack foods. Contains MSG.", source: sourceURL[mph_programs_list_advocates_for_public_health_education])
@@ -41,7 +41,7 @@ let green_three = Ingredient(name: "Green #3", description: "Used in candy and b
 // H
 let high_fructose_corn_syrup = Ingredient(name: "High Fructose Corn Syrup", description: "Sweetener made from corn starch. Made from genetically-modified corn. Causes obesity, diabetes, heart problems, arthritis and insulin resistance.", source: sourceURL[mph_programs_list_advocates_for_public_health_education])
 // M
-let monosodium_glutamate = Ingredient(name: "Monosodium Glutamate (MSG)", description: " Flavor enhancer that can cause headaches. Linked in animal studies to nerve damage, heart problems and seizures.", source: sourceURL[mph_programs_list_advocates_for_public_health_education])
+let monosodium_glutamate = Ingredient(name: "Monosodium Glutamate (MSG)", description: "Flavor enhancer that can cause headaches. Linked in animal studies to nerve damage, heart problems and seizures.", source: sourceURL[mph_programs_list_advocates_for_public_health_education])
 let magnesium_sulphate = Ingredient(name: "Magnesium Sulphate:", description: "Used in tofu, can cause cancer in laboratory animals.", source: sourceURL[mph_programs_list_advocates_for_public_health_education])
 // N
 let norbixin = Ingredient(name: "Norbixin", description: "Food coloring that can cause hyperactivity in children and asthma.", source: sourceURL[mph_programs_list_advocates_for_public_health_education])
