@@ -93,9 +93,25 @@ class ScannerViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
                 }
                 // Creating scanned label object
                 currentScannedLabel = ScannedLabel(scannedImage: image)
-                //NSLog(String(describing: currentScannedLabel.scannedImage.size))
                 currentScannedLabel.extractTextFromImage()
                 currentScannedLabel.parseText()
+                currentScannedLabel.updateScannedValues()
+                
+                // Checking each nutrition value and creating
+                // feedback
+                for (index, scannedValue) in currentScannedLabel.scannedValues.enumerated() {
+                    if (scannedValue >= (nutritionValues[index].dailyMax/2)) {
+                        nutritionFeedback = nutritionFeedback + " " + currentScannedLabel.getNutritionFeedback(scannedValue: scannedValue, DVvalue: nutritionValues[index])
+                    }
+                }
+                
+                // Checking if there were any nutritional
+                // issues with the scanned product
+                if (nutritionFeedback.isEmpty) {
+                    NSLog("Healthy")
+                } else {
+                    NSLog("Unhealthy")
+                }
             }
         }
     }

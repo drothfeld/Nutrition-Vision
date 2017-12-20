@@ -92,6 +92,20 @@ class ScannedLabel {
         }
     }
     
+    // Update scanned values array
+    func updateScannedValues() {
+        self.scannedValues = [
+            sodium,
+            cholesterol,
+            total_carbohydrate,
+            dietary_fiber,
+            saturated_fat,
+            total_fat,
+            sugar,
+            protein
+        ]
+    }
+    
     // Get text feedback about scanned
     // nutrition value compared to healthy DV
     func getNutritionFeedback(scannedValue: Int, DVvalue: NutritionValue) -> String {
