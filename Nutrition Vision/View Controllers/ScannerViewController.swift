@@ -94,6 +94,8 @@ class ScannerViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
                 // Creating scanned label object
                 currentScannedLabel = ScannedLabel(scannedImage: image)
                 //NSLog(String(describing: currentScannedLabel.scannedImage.size))
+                currentScannedLabel.extractTextFromImage()
+                currentScannedLabel.parseText()
             }
         }
     }
