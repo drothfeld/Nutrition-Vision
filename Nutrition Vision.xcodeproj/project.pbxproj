@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		358520E81ED17647AE5699D1 /* Pods_Nutrition_Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB05EE04A7489BBBDC5BB1C1 /* Pods_Nutrition_Vision.framework */; };
 		B02879621FD5BC9400E12960 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02879611FD5BC9400E12960 /* PhotoViewController.swift */; };
 		B031F7D21FE8CDC500E4D622 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B031F7CC1FE8CDC500E4D622 /* camera@2x.png */; };
 		B031F7D31FE8CDC500E4D622 /* unhealthy.png in Resources */ = {isa = PBXBuildFile; fileRef = B031F7CD1FE8CDC500E4D622 /* unhealthy.png */; };
@@ -19,6 +20,10 @@
 		B0485D031FC4940F00AE85FA /* DailyNutritionValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0485D021FC4940F00AE85FA /* DailyNutritionValues.swift */; };
 		B0485D051FC4953500AE85FA /* NutritionValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0485D041FC4953500AE85FA /* NutritionValue.swift */; };
 		B0485D071FC796F400AE85FA /* ScannedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0485D061FC796F400AE85FA /* ScannedLabel.swift */; };
+		B07792B91FEC2C30006483FB /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = B07792B81FEC2C30006483FB /* tessdata */; };
+		B07792BB1FEC2CBA006483FB /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B07792BA1FEC2CBA006483FB /* libstdc++.tbd */; };
+		B07792BD1FEC2CCA006483FB /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07792BC1FEC2CC9006483FB /* CoreImage.framework */; };
+		B07792BE1FEC2CD1006483FB /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07792BF1FEC2CD1006483FB /* TesseractOCR.framework */; };
 		B08315931FB2259B000E9BA8 /* UnhealthyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08315921FB2259B000E9BA8 /* UnhealthyViewController.swift */; };
 		B0908A661FB4F53600E29B01 /* ListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0908A651FB4F53600E29B01 /* ListData.swift */; };
 		B096DA541FB4C0F30008FE08 /* UnhealthyIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096DA531FB4C0F30008FE08 /* UnhealthyIngredients.swift */; };
@@ -32,6 +37,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F95585E745679FF08EEF3B1 /* Pods-Nutrition Vision.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrition Vision.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nutrition Vision/Pods-Nutrition Vision.debug.xcconfig"; sourceTree = "<group>"; };
+		3AB19CC02BD4A25EBEC82C9E /* Pods-Nutrition Vision.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrition Vision.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nutrition Vision/Pods-Nutrition Vision.release.xcconfig"; sourceTree = "<group>"; };
 		B02879611FD5BC9400E12960 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		B031F7CC1FE8CDC500E4D622 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
 		B031F7CD1FE8CDC500E4D622 /* unhealthy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unhealthy.png; sourceTree = "<group>"; };
@@ -44,6 +51,10 @@
 		B0485D021FC4940F00AE85FA /* DailyNutritionValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyNutritionValues.swift; sourceTree = "<group>"; };
 		B0485D041FC4953500AE85FA /* NutritionValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionValue.swift; sourceTree = "<group>"; };
 		B0485D061FC796F400AE85FA /* ScannedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannedLabel.swift; sourceTree = "<group>"; };
+		B07792B81FEC2C30006483FB /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		B07792BA1FEC2CBA006483FB /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		B07792BC1FEC2CC9006483FB /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		B07792BF1FEC2CD1006483FB /* TesseractOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08315921FB2259B000E9BA8 /* UnhealthyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhealthyViewController.swift; sourceTree = "<group>"; };
 		B0908A651FB4F53600E29B01 /* ListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListData.swift; sourceTree = "<group>"; };
 		B096DA531FB4C0F30008FE08 /* UnhealthyIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhealthyIngredients.swift; sourceTree = "<group>"; };
@@ -56,6 +67,7 @@
 		B0DCA7B31FABC5CB008A2CAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0DCA7B51FABC5CB008A2CAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0E0BD7D1FBE2E1300A03115 /* Sources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources.swift; sourceTree = "<group>"; };
+		BB05EE04A7489BBBDC5BB1C1 /* Pods_Nutrition_Vision.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nutrition_Vision.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,12 +75,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B07792BE1FEC2CD1006483FB /* TesseractOCR.framework in Frameworks */,
+				B07792BD1FEC2CCA006483FB /* CoreImage.framework in Frameworks */,
+				B07792BB1FEC2CBA006483FB /* libstdc++.tbd in Frameworks */,
+				358520E81ED17647AE5699D1 /* Pods_Nutrition_Vision.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5148B55934DF596956D5ACA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0F95585E745679FF08EEF3B1 /* Pods-Nutrition Vision.debug.xcconfig */,
+				3AB19CC02BD4A25EBEC82C9E /* Pods-Nutrition Vision.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		55320DF8372A158C703967C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B07792BF1FEC2CD1006483FB /* TesseractOCR.framework */,
+				B07792BC1FEC2CC9006483FB /* CoreImage.framework */,
+				B07792BA1FEC2CBA006483FB /* libstdc++.tbd */,
+				BB05EE04A7489BBBDC5BB1C1 /* Pods_Nutrition_Vision.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B07792B71FEC2C10006483FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B07792B81FEC2C30006483FB /* tessdata */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		B08315811FB21DC1000E9BA8 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +173,8 @@
 			children = (
 				B0DCA7A81FABC5CB008A2CAF /* Nutrition Vision */,
 				B0DCA7A71FABC5CB008A2CAF /* Products */,
+				5148B55934DF596956D5ACA6 /* Pods */,
+				55320DF8372A158C703967C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +189,7 @@
 		B0DCA7A81FABC5CB008A2CAF /* Nutrition Vision */ = {
 			isa = PBXGroup;
 			children = (
+				B07792B71FEC2C10006483FB /* Supporting Files */,
 				B096DA551FB4C1680008FE08 /* Classes */,
 				B096DA521FB4C0B90008FE08 /* Constants */,
 				B08315911FB22573000E9BA8 /* View Controllers */,
@@ -162,9 +209,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0DCA7B81FABC5CB008A2CAF /* Build configuration list for PBXNativeTarget "Nutrition Vision" */;
 			buildPhases = (
+				F61456F96326E2E5D6616EDC /* [CP] Check Pods Manifest.lock */,
 				B0DCA7A21FABC5CB008A2CAF /* Sources */,
 				B0DCA7A31FABC5CB008A2CAF /* Frameworks */,
 				B0DCA7A41FABC5CB008A2CAF /* Resources */,
+				E1325B248A5902B1C0359492 /* [CP] Embed Pods Frameworks */,
+				9F89E77B7B1DFB4C72E35A10 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -217,6 +267,7 @@
 				B031F7D61FE8CDC500E4D622 /* unhealthy@3x.png in Resources */,
 				B031F7D51FE8CDC500E4D622 /* camera@3px.png in Resources */,
 				B0DCA7B41FABC5CB008A2CAF /* LaunchScreen.storyboard in Resources */,
+				B07792B91FEC2C30006483FB /* tessdata in Resources */,
 				B031F7D91FE9AB8D00E4D622 /* placeholder.png in Resources */,
 				B031F7D71FE8CDC500E4D622 /* unhealthy@2x.png in Resources */,
 				B031F7D31FE8CDC500E4D622 /* unhealthy.png in Resources */,
@@ -228,6 +279,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9F89E77B7B1DFB4C72E35A10 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nutrition Vision/Pods-Nutrition Vision-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1325B248A5902B1C0359492 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Nutrition Vision/Pods-Nutrition Vision-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TesseractOCRiOS/TesseractOCR.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TesseractOCR.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nutrition Vision/Pods-Nutrition Vision-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F61456F96326E2E5D6616EDC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nutrition Vision-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B0DCA7A21FABC5CB008A2CAF /* Sources */ = {
@@ -380,10 +485,12 @@
 		};
 		B0DCA7B91FABC5CB008A2CAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F95585E745679FF08EEF3B1 /* Pods-Nutrition Vision.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X984X22XTP;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "Nutrition Vision/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "drothfeld.Nutrition-Vision";
@@ -395,10 +502,12 @@
 		};
 		B0DCA7BA1FABC5CB008A2CAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AB19CC02BD4A25EBEC82C9E /* Pods-Nutrition Vision.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X984X22XTP;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "Nutrition Vision/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "drothfeld.Nutrition-Vision";
