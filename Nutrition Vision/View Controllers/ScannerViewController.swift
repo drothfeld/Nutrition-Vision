@@ -8,7 +8,6 @@
 
 import UIKit
 import AVFoundation
-import TesseractOCR
 
 class ScannerViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
@@ -17,17 +16,11 @@ class ScannerViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
     var previewLayer: CALayer!
     var captureDevice: AVCaptureDevice!
     var takePhoto = false
-    var currentScannedLabel: ScannedLabel!
     var nutritionFeedback: String = ""
-    var isHealthy: Bool = true
-    
-    // UI Elements
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        resetScanner()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -93,35 +86,6 @@ class ScannerViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
                         self.stopCaptureSession()
                     })
                 }
-                // Creating scanned label object
-                currentScannedLabel = ScannedLabel(scannedImage: image)
-                
-                // Prepare and process image for text
-                let scaledImage = currentScannedLabel.scannedImage.scaleImage(640)
-                activityIndicator.startAnimating()
-                dismiss(animated: true, completion: {
-                    self.performImageRecognition(scaledImage!)
-                })
-            
-                currentScannedLabel.extractTextFromImage()
-                currentScannedLabel.parseText()
-                currentScannedLabel.updateScannedValues()
-                
-                // Checking each nutrition value and creating
-                // feedback
-                for (index, scannedValue) in currentScannedLabel.scannedValues.enumerated() {
-                    if (scannedValue >= (nutritionValues[index].dailyMax/2)) {
-                        nutritionFeedback = nutritionFeedback + " " + currentScannedLabel.getNutritionFeedback(scannedValue: scannedValue, DVvalue: nutritionValues[index])
-                    }
-                }
-                
-                // Checking if there were any nutritional
-                // issues with the scanned product
-                if (nutritionFeedback.isEmpty) {
-                    NSLog("Healthy")
-                } else {
-                    NSLog("Unhealthy")
-                }
             }
         }
     }
@@ -153,62 +117,6 @@ class ScannerViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
     @IBAction func takePhoto(_ sender: Any) {
         takePhoto = true
     }
-    
-    // Resetting all scanner values
-    func resetScanner() {
-        nutritionFeedback = ""
-        isHealthy = true
-        // TODO: Need to grab the string from the
-        // name of the image that user takes
-    }
-    
-    // Concatenating feedback string for all nutritional values
-    func checkNutritionValues() {
-        for (index, nutritionObject) in nutritionValues.enumerated() {
-            nutritionFeedback += currentScannedLabel.getNutritionFeedback(scannedValue: currentScannedLabel.scannedValues[index], DVvalue: nutritionObject)
-        }
-    }
-    
-    // Tesseract Image Recognition
-    func performImageRecognition(_ image: UIImage) {
-        if let tesseract = G8Tesseract(language: "eng+fra") {
-            tesseract.engineMode = .cubeOnly
-            tesseract.pageSegmentationMode = .auto
-            tesseract.image = image.g8_blackAndWhite()
-            tesseract.recognize()
-            
-
-            // For testing purposes only
-            NSLog("TESSERACT (.cubeOnly): " + tesseract.recognizedText)
-            let alertController = UIAlertController(title: "Tesseract (.cubeOnly)", message: tesseract.recognizedText, preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "Close Alert", style: .default, handler: nil)
-            alertController.addAction(defaultAction)
-            present(alertController, animated: true, completion: nil)
-        }
-        activityIndicator.stopAnimating()
-    }
 }
 
-// UIImage extension
-extension UIImage {
-    func scaleImage(_ maxDimension: CGFloat) -> UIImage? {
-        
-        var scaledSize = CGSize(width: maxDimension, height: maxDimension)
-        
-        if size.width > size.height {
-            let scaleFactor = size.height / size.width
-            scaledSize.height = scaledSize.width * scaleFactor
-        } else {
-            let scaleFactor = size.width / size.height
-            scaledSize.width = scaledSize.height * scaleFactor
-        }
-        
-        UIGraphicsBeginImageContext(scaledSize)
-        draw(in: CGRect(origin: .zero, size: scaledSize))
-        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        
-        return scaledImage
-    }
-}
 

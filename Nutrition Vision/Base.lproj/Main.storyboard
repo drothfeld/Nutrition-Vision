@@ -159,12 +159,6 @@
                     <view key="view" contentMode="scaleToFill" id="JMQ-cI-a0d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kS6-cE-vyv" userLabel="Activity Indicator">
-                                <rect key="frame" x="177" y="299" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="A6K-t2-AK5"/>
                     </view>
@@ -175,9 +169,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="activityIndicator" destination="kS6-cE-vyv" id="hZd-qO-eAt"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ocm-iA-gM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -233,6 +224,8 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="qmO-NG-4Dq" id="zdc-eJ-Cr0"/>
+                        <outlet property="isHealthyLabel" destination="Sl0-ZF-GRG" id="de1-t8-XkP"/>
+                        <outlet property="nutritionalFeedback" destination="kZ2-y0-NoG" id="Jew-J2-wv1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vZQ-RM-eSY" userLabel="First Responder" sceneMemberID="firstResponder"/>

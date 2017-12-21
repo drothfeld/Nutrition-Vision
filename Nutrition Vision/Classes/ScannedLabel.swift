@@ -38,21 +38,11 @@ class ScannedLabel {
             sugar,
             protein
         ]
-        
-        self.extractTextFromImage()
-        self.parseText()
     }
     
     // Description returned for nutritional value comparison
     private func overDailyMax(nutritionalValue: String, halfToMax: Bool) -> String {
         return "The amount of " + nutritionalValue + " in a single serving of this product is more than" + (halfToMax ? " half of " : " ") + "the healthy daily allowance."
-    }
-    
-    // TODO: Implement SwiftOCR library to
-    // create nerual net that extracts a string
-    // from the scanned image
-    func extractTextFromImage() {
-        self.scannedText = "Total Fat 14g Saturated Fat 9g Cholesterol 55mg Sodium 75g Total Carbohydrate 945g Dietary Fiber 20g Total Sugars 33g Protein 6g"
     }
     
     // Parse nutrition values from extended
