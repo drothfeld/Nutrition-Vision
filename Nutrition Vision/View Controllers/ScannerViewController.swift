@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import TesseractOCR
 
 class ScannerViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
     
@@ -21,6 +22,7 @@ class ScannerViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
     var isHealthy: Bool = true
     
     // UI Elements
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
 
     override func viewDidLoad() {
@@ -93,6 +95,14 @@ class ScannerViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
                 }
                 // Creating scanned label object
                 currentScannedLabel = ScannedLabel(scannedImage: image)
+                
+                // Prepare and process image for text
+                let scaledImage = currentScannedLabel.scannedImage.scaleImage(640)
+                activityIndicator.startAnimating()
+                dismiss(animated: true, completion: {
+                    self.performImageRecognition(scaledImage!)
+                })
+            
                 currentScannedLabel.extractTextFromImage()
                 currentScannedLabel.parseText()
                 currentScannedLabel.updateScannedValues()
@@ -158,8 +168,25 @@ class ScannerViewController: UIViewController, AVCaptureVideoDataOutputSampleBuf
             nutritionFeedback += currentScannedLabel.getNutritionFeedback(scannedValue: currentScannedLabel.scannedValues[index], DVvalue: nutritionObject)
         }
     }
+    
+    // Tesseract Image Recognition
+    func performImageRecognition(_ image: UIImage) {
+        if let tesseract = G8Tesseract(language: "eng+fra") {
+            tesseract.engineMode = .cubeOnly
+            tesseract.pageSegmentationMode = .auto
+            tesseract.image = image.g8_blackAndWhite()
+            tesseract.recognize()
+            
 
-
+            // For testing purposes only
+            NSLog("TESSERACT (.cubeOnly): " + tesseract.recognizedText)
+            let alertController = UIAlertController(title: "Tesseract (.cubeOnly)", message: tesseract.recognizedText, preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "Close Alert", style: .default, handler: nil)
+            alertController.addAction(defaultAction)
+            present(alertController, animated: true, completion: nil)
+        }
+        activityIndicator.stopAnimating()
+    }
 }
 
 // UIImage extension
