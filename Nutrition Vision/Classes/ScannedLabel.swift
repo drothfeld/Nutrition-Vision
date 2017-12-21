@@ -50,31 +50,72 @@ class ScannedLabel {
     func parseText() {
         let splitTextArray = self.scannedText.components(separatedBy:  " ")
         for (index, text) in splitTextArray.enumerated() {
+            
+            // FOR TESTING:
+            NSLog("NEW INDEX: " + text)
+            if ((text.lowercased().range(of:"sugar") != nil) ||
+                (text.lowercased().range(of:"sugars") != nil) ||
+                (text.lowercased().range(of:"protein") != nil) ||
+                (text.lowercased().range(of:"fiber") != nil)) {
+                NSLog("----------------------")
+                NSLog("SUGAR/PROTEIN AMOUNT: " + splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined())
+//                let number = Int(string.components(separatedBy: CharacterSet.decimalDigits.inverted).joined())
+                NSLog("----------------------")
+            }
+            
+            if (text.lowercased().range(of:"fiber") != nil && Int(splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined()) != nil) {
+                self.dietary_fiber = Int(splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined())!
+            }
+            
+            if (((text.lowercased().range(of:"sugar") != nil) ||
+                (text.lowercased().range(of:"sugars") != nil)) &&
+                Int(splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined()) != nil) {
+                self.sugar = Int(splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined())!
+            }
+            
+            if (text.lowercased().range(of:"protein") != nil && Int(splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined()) != nil) {
+                self.protein = Int(splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined())!
+            }
+            
             switch text {
                 case "Sodium":
-                    self.sodium = Int(splitTextArray[index + 1].dropLast())!
+                    if (Int(splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined()) != nil) {
+                        self.sodium = Int(splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined())!
+                    }
 
                 case "Cholesterol":
-                    self.cholesterol = (Int(splitTextArray[index + 1].dropLast().dropLast()))!
+                    if (Int(splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined()) != nil) {
+                        self.cholesterol = (Int(splitTextArray[index + 1].dropLast().dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined()))!
+                    }
                 
                 case "Total":
                     if (splitTextArray[index + 1] == "Fat") {
-                        self.total_fat = Int(splitTextArray[index + 2].dropLast())!
+                        if (Int(splitTextArray[index + 2].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined()) != nil) {
+                            self.total_fat = Int(splitTextArray[index + 2].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined())!
+                        }
                     } else if (splitTextArray[index + 1] == "Carbohydrate") {
-                        self.total_carbohydrate = Int(splitTextArray[index + 2].dropLast())!
+                        self.total_carbohydrate = Int(splitTextArray[index + 2].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined())!
                     }
                 
-                case "Fiber":
-                    self.dietary_fiber = Int(splitTextArray[index + 1].dropLast())!
+//                case "Fiber":
+//                    if (Int(splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined()) != nil) {
+//                        self.dietary_fiber = Int(splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined())!
+//                    }
                 
                 case "Saturated":
-                    self.saturated_fat = Int(splitTextArray[index + 2].dropLast())!
+                    if (Int(splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined()) != nil) {
+                        self.saturated_fat = Int(splitTextArray[index + 2].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined())!
+                    }
                 
-                case "Sugar", "Sugars":
-                    self.sugar = Int(splitTextArray[index + 1].dropLast())!
-                
-                case "Protein":
-                    self.protein = Int(splitTextArray[index + 1].dropLast())!
+//                case "Sugar", "Sugars":
+//                    if (Int(splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined()) != nil) {
+//                        self.sugar = Int(splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined())!
+//                    }
+//
+//                case "Protein":
+//                    if (Int(splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined()) != nil) {
+//                        self.protein = Int(splitTextArray[index + 1].dropLast().components(separatedBy: CharacterSet.decimalDigits.inverted).joined())!
+//                    }
                 
                 default:
                     break

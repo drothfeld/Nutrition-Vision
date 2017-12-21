@@ -57,9 +57,6 @@ class PhotoViewController: UIViewController {
             self.performImageRecognition(scaledImage!)
 //        })
         
-        currentScannedLabel.parseText()
-        currentScannedLabel.updateScannedValues()
-        
         // Checking each nutrition value and creating
         // feedback
         for (index, scannedValue) in currentScannedLabel.scannedValues.enumerated() {
@@ -68,14 +65,26 @@ class PhotoViewController: UIViewController {
             }
         }
         
+        // FOR TESTING:
+        NSLog("Nutrition String: " + currentScannedLabel.scannedText)
+        NSLog("Fiber: " + String(describing: currentScannedLabel.scannedValues[3]))
+        NSLog("Saturated Fat: " + String(describing: currentScannedLabel.scannedValues[4]))
+        NSLog("Total Fat: " + String(describing: currentScannedLabel.scannedValues[5]))
         NSLog("Sugar: " + String(describing: currentScannedLabel.scannedValues[6]))
+        NSLog("Protein: " + String(describing: currentScannedLabel.scannedValues[7]))
         
         // Checking if there were any nutritional
         // issues with the scanned product
         if (nutritionFeedback.isEmpty) {
             NSLog("Healthy")
+            isHealthyLabel.text = "Healthy"
+            isHealthyLabel.textColor = UIColor.green
+            nutritionalFeedback.text = "There is nothing alarming about the nutritional values in this product. Make sure to check the ingredients though!"
         } else {
             NSLog("Unhealthy")
+            isHealthyLabel.text = "Unhealthy"
+            isHealthyLabel.textColor = UIColor.red
+            nutritionalFeedback.text = nutritionFeedback
         }
     }
     
@@ -96,7 +105,8 @@ class PhotoViewController: UIViewController {
             
             // Grabbing text for scannedLabel 
             currentScannedLabel.scannedText = tesseract.recognizedText
-            NSLog("tesseract (" + String(describing: tesseract.engineMode) + "): " + tesseract.recognizedText)
+            currentScannedLabel.parseText()
+            currentScannedLabel.updateScannedValues()
         }
 //        activityIndicator.stopAnimating()
     }
