@@ -79,7 +79,7 @@ class PhotoViewController: UIViewController {
             NSLog("Healthy")
             isHealthyLabel.text = "Healthy"
             isHealthyLabel.textColor = UIColor.green
-            nutritionalFeedback.text = "There is nothing alarming about the nutritional values in this product. Make sure to check the ingredients though!"
+            nutritionalFeedback.text = ""
         } else if (!nutritionFeedback.isEmpty || currentScannedLabel.hasUnhealthyIngredient()) {
             NSLog("Unhealthy")
             isHealthyLabel.text = "Unhealthy"
