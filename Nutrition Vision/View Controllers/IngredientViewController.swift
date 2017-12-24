@@ -40,7 +40,7 @@ class IngredientViewController: UIViewController {
                 IngredientSourceText.text = String(describing: detailIngredient.source)
                 attributedSourceString.addAttribute(.link, value: String(describing: detailIngredient.source), range: NSRange(location: 0, length: 16))
                 IngredientSourceText.attributedText = attributedSourceString
-                //IngredientImage.image = UIImage(detailIngredient.image)
+                IngredientImage.image = detailIngredient.image
             }
         }
     }

@@ -24,6 +24,7 @@
 		B07792BB1FEC2CBA006483FB /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B07792BA1FEC2CBA006483FB /* libstdc++.tbd */; };
 		B07792BD1FEC2CCA006483FB /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07792BC1FEC2CC9006483FB /* CoreImage.framework */; };
 		B07792BE1FEC2CD1006483FB /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B07792BF1FEC2CD1006483FB /* TesseractOCR.framework */; };
+		B07792C31FF069B5006483FB /* exmaple-highFructoseCornSyrup.png in Resources */ = {isa = PBXBuildFile; fileRef = B07792C21FF069B5006483FB /* exmaple-highFructoseCornSyrup.png */; };
 		B08315931FB2259B000E9BA8 /* UnhealthyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08315921FB2259B000E9BA8 /* UnhealthyViewController.swift */; };
 		B0908A661FB4F53600E29B01 /* ListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0908A651FB4F53600E29B01 /* ListData.swift */; };
 		B096DA541FB4C0F30008FE08 /* UnhealthyIngredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = B096DA531FB4C0F30008FE08 /* UnhealthyIngredients.swift */; };
@@ -55,6 +56,7 @@
 		B07792BA1FEC2CBA006483FB /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		B07792BC1FEC2CC9006483FB /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		B07792BF1FEC2CD1006483FB /* TesseractOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07792C21FF069B5006483FB /* exmaple-highFructoseCornSyrup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exmaple-highFructoseCornSyrup.png"; sourceTree = "<group>"; };
 		B08315921FB2259B000E9BA8 /* UnhealthyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhealthyViewController.swift; sourceTree = "<group>"; };
 		B0908A651FB4F53600E29B01 /* ListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListData.swift; sourceTree = "<group>"; };
 		B096DA531FB4C0F30008FE08 /* UnhealthyIngredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnhealthyIngredients.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		B08315821FB21DCF000E9BA8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B07792C21FF069B5006483FB /* exmaple-highFructoseCornSyrup.png */,
 				B031F7D81FE9AB8D00E4D622 /* placeholder.png */,
 				B031F7CE1FE8CDC500E4D622 /* camera.png */,
 				B031F7CC1FE8CDC500E4D622 /* camera@2x.png */,
@@ -275,6 +278,7 @@
 				B0DCA7AF1FABC5CB008A2CAF /* Main.storyboard in Resources */,
 				B031F7D41FE8CDC500E4D622 /* camera.png in Resources */,
 				B031F7D21FE8CDC500E4D622 /* camera@2x.png in Resources */,
+				B07792C31FF069B5006483FB /* exmaple-highFructoseCornSyrup.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
