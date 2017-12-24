@@ -75,12 +75,12 @@ class PhotoViewController: UIViewController {
         
         // Checking if there were any nutritional
         // issues with the scanned product
-        if (nutritionFeedback.isEmpty) {
+        if (nutritionFeedback.isEmpty && !currentScannedLabel.hasUnhealthyIngredient()) {
             NSLog("Healthy")
             isHealthyLabel.text = "Healthy"
             isHealthyLabel.textColor = UIColor.green
             nutritionalFeedback.text = "There is nothing alarming about the nutritional values in this product. Make sure to check the ingredients though!"
-        } else {
+        } else if (!nutritionFeedback.isEmpty || currentScannedLabel.hasUnhealthyIngredient()) {
             NSLog("Unhealthy")
             isHealthyLabel.text = "Unhealthy"
             isHealthyLabel.textColor = UIColor.red

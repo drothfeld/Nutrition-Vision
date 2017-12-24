@@ -137,6 +137,19 @@ class ScannedLabel {
         ]
     }
     
+    // Check ingredients
+    func hasUnhealthyIngredient() -> Bool {
+//        let splitTextArray = self.scannedText.components(separatedBy:  " ")
+//        for (splitIndex, text) in splitTextArray.enumerated() {
+            for ingredient in unhealthyIngredients {
+                if (scannedText.lowercased().range(of:ingredient.name) != nil) {
+                    return true
+                }
+            }
+//        }
+        return false
+    }
+    
     // Get text feedback about scanned
     // nutrition value compared to healthy DV
     func getNutritionFeedback(scannedValue: Int, DVvalue: NutritionValue) -> String {
